@@ -31,7 +31,7 @@
  */
 
 #include <QDebug>
-#include <QDBusMetaType>
+#include <QDBusArgument> 
 #include "vpnconnection.h"
 
 #include "marshalutils.h"
@@ -183,6 +183,7 @@ QVariantMap MarshalUtils::propertiesToQml(const QVariantMap &fromDBus)
     return rv;
 }
 
+#include <QDBusMetaType>
 // Conversion to/from DBus/QML
 QHash<QString, MarshalUtils::conversionFunction> MarshalUtils::propertyConversions()
 {
