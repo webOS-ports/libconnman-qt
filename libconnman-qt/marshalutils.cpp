@@ -36,6 +36,11 @@
 
 #include "marshalutils.h"
 
+#if defined(__clang__) &&  __clang_major__ >= 11 || __GNUC__ >= 12
+Q_DBUS_EXPORT const QDBusArgument &operator>>(const QDBusArgument &a, RouteStructure &v);
+Q_DBUS_EXPORT QDBusArgument &operator<<(QDBusArgument &a, const RouteStructure &v);
+#endif
+
 // Empty namespace for local static functions
 namespace {
 
