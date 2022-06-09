@@ -41,9 +41,6 @@ Q_DBUS_EXPORT const QDBusArgument &operator>>(const QDBusArgument &a, RouteStruc
 Q_DBUS_EXPORT QDBusArgument &operator<<(QDBusArgument &a, const RouteStructure &v);
 #endif
 
-// Empty namespace for local static functions
-namespace {
-
 // Marshall the RouteStructure data into a D-Bus argument
 QDBusArgument &operator<<(QDBusArgument &argument, const RouteStructure &routestruct)
 {
@@ -126,8 +123,6 @@ QVariant convertRoutes (const QString &, const QVariant &value, bool toDBus) {
     }
     return variant;
 }
-
-} // Empty namespace
 
 template<typename T>
 inline QVariant extract(const QDBusArgument &arg)
