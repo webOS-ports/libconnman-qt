@@ -34,6 +34,7 @@
 #define VPNMODEL_H
 
 #include <QAbstractListModel>
+Q_MOC_INCLUDE("vpnmanager.h")
 
 class VpnModelPrivate;
 class VpnManager;
