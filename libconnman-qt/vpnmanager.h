@@ -35,7 +35,7 @@
 
 #include <QObject>
 
-Q_MOC_INCLUDE("vpnconnection.h")
+#include "vpnconnection.h"
 
 class VpnManagerPrivate;
 class VpnManager;
